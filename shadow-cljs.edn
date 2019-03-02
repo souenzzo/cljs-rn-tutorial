@@ -1,0 +1,10 @@
+{:deps   {:aliases [:cljs :dev]}
+ :builds {:web        {:target            :browser
+                       :output-dir        "target/public/web"
+                       :asset-path        "/_static/web"
+                       :modules           {:main {:entries [app-client.core]}}
+                       :module-hash-names true
+                       :devtools          {:preloads   [app-client.user
+                                                        devtools.preload
+                                                        fulcro.inspect.preload]
+                                           :after-load app-client.user/after-load}}}}
