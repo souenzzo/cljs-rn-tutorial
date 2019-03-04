@@ -10,4 +10,5 @@
   [& _]
   (server/run-dev)
   (prn [@shadow-server])
-  (shadow/watch :web))
+  (shadow/watch :web)
+  (shadow/watch :rn))
